@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows</title>
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="./js/index.js"></script>
+
+</head>
+<script>
+
+    function insert(num)
+    {
+        document.form.answer.value += num; 
+    }
+
+    function equal()
+    {
+        document.form.answer.value = eval(document.form.answer.value);
+
+    }
+</script>
+<body>
+    <div class="icon-box">
+    <div class="icon-div" ondblclick="cal()">
+        <img src="./img/calculator-icon.png" >
+        <p style="margin: 0px;">Calculator</p>
+    </div>
+
+    <div class="icon-div">
+        <img src="./img/github.png" >
+        <p style="margin: 0px;">Fetch Git Profile</p>
+    </div>
+
+    <div class="icon-div">
+        <img src="./img/wheather-icon.png" >
+        <p style="margin: 0px;">Wheather</p>
+    </div>
+
+    <div class="icon-div">
+        <img src="./img/todo.png" >
+        <p style="margin: 0px;">Todo</p>
+    </div>
+    <div class="icon-div">
+        <img src="./img/exp.png" >
+        <p style="margin: 0px;">Expense Management System</p>
+    </div>
+    <div class="icon-div">
+        <img src="./img/tic-tac-toe.jpg" >
+        <p style="margin: 0px;">Tic Tac Toe</p>
+    </div>
+    </div>
+
+    <div class="formstyle" id="cal">
+        <div onclick="hide()" class="hide" >X</div>
+        <form name="form">
+            <input class="output" type="text" name="answer" style="width: 314px; margin: 0px; padding: 0px;">
+            <div style="margin: 0 auto; width: 100%; height: 500px; margin-top: 30px;">
+            <div onclick="insert(1)" class="btns">1</div>
+            <div onclick="insert(2)" class="btns">2</div>
+            <div onclick="insert(3)" class="btns">3</div>
+
+            <div onclick="insert(4)" class="btns">4</div>
+            <div onclick="insert(5)" class="btns">5</div>
+            <div onclick="insert(6)" class="btns">6</div>
+
+            <div onclick="insert(7)" class="btns">7</div>
+            <div onclick="insert(8)" class="btns">8</div>
+            <div onclick="insert(9)" class="btns">9</div>
+
+            <div onclick="insert('-')" class="btns">-</div>
+            <div onclick="insert(0)" class="btns">0</div>
+            <div onclick="insert('/')" class="btns">/</div>
+
+            <div onclick="insert('*')" class="btns">*</div>
+            <div onclick="insert('+')" class="btns">+</div>
+            <div onclick="equal()" class="btns">=</div>
+            
+            
+            
+
+            
+            <div onclick="form.answer.value=''" class="btns" style="width: 100%; padding: 0px;padding-top: 10px; padding-bottom: 10px;">Clear</div>
+            </div>
+            
+
+
+        </form>
+
+
+    </div>
+    
+    <div class="footer">
+       <ion-icon name="logo-windows" style="color: white; font-size: 27px; cursor: pointer;"></ion-icon>
+    </div>
+    
+
+</body>
+
+</html>
