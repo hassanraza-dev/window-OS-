@@ -12,8 +12,9 @@ body
     width: 100%;
     bottom: 0;
     position: fixed;
-    opacity: .8;
-    padding: 10px;
+    padding: 5px;
+    margin-top: 30px;
+    border-top: 1px white solid;
 }
 .icon-box
 {
@@ -23,10 +24,10 @@ body
 {
     padding: 6px;
     margin: 10px;
-    width: 70px;
+    width: 95px;
    text-align: center;
    color: white;
-   transition: .3s ease-in-out;
+   transition: .2s ease-in-out;
    cursor: pointer;
    
 }
@@ -39,23 +40,20 @@ img
 {
     height: 50px;
 }
-p
-{
-    font-family: monospace;
-    text-shadow:0px 0px 7px white;
-}
+
 
 .formstyle
 {
     width: 318px;
-    height: 500px;
+    height: 550px;
     border: 2px solid black;
     position: relative;
     margin: 0 auto;
     box-shadow: 1px 2px 10px black;
     padding: 10px;
     background-color: black;
-    border-radius: 20px;
+    position: absolute;
+    margin-left: 100px;
     display: none;
 
     
@@ -68,12 +66,15 @@ input
 width: 100px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-size: 25px;
-margin-top: 20px;
+margin-top: 30px;
 height: 40px;
+width: 314px;
+ margin: 0px;
+padding: 0px;
 }
 .btns
 {
-    width: 82px;
+    width: 98px;
    cursor: pointer;
     text-align: center;
     background-color: gray;
@@ -98,15 +99,201 @@ text-align: right;
 }
 .hide
 {
-    text-align: center;
+    text-align: right;
      font-size: 25px; 
-     cursor: pointer; 
+     
      color: white;
-      font-family:monospace;
-    border-radius: 50%;
+      width: 100%;
+    padding: 5px;
       float: right;
-      width: 30px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
       
       background-color: darkred;
-      padding: 2px;
+      
     }
+
+    .screen
+{
+    background-color: white;
+    height: 625px;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 2px;
+    position: absolute;
+    margin-left: 100px;
+    display: none;
+}
+.cstm
+{
+    background-color: whitesmoke;
+    border-radius: 50px;
+    margin-top: 6px;
+}
+.cover
+{
+    background-image: url(..//img/cover.jpg);
+    height: 120px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    margin-top: 5px;
+    
+}
+.pic
+{
+    background-image: url(..//img/pic.jpg);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -60px;
+    border: 5px white solid;
+    background-position: center;
+    background-size: cover;
+}
+.user_name
+{
+    font-size: 30px;
+}
+.location,.email
+{
+    font-size: 20px;
+}
+
+
+.container-wh
+{
+    
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 340px;
+    height: 580px;
+    background-image: url(..//img/wheather-cover.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 20px white;
+    display: none;
+}
+.container-wh p
+{
+    font-size: 22px;
+}
+.srch-btn
+{
+    float: right;
+    
+}
+#user-input
+{
+    border: none; 
+    border-bottom: 1px solid white;
+    background: none;
+    color: white;
+    width: 290px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+input:focus{
+    outline: none;
+}
+.srch-btn
+{
+    background:none;
+    border: none;
+    border-radius: 50px;
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+
+}
+.data 
+{
+    margin-top:10px;
+    height: 350px;
+}
+.convert
+{
+    
+    height: 60px;
+    width: 100%;
+    padding: 12px;
+}
+
+.main {
+    height: 520px;
+    width: 330px;
+    
+    background-color: seagreen;
+    margin: 0 auto;
+    
+    box-shadow: 1px 1px 9px black;
+    transition: 2s linear;
+    position: relative;
+    font-size: 30px;
+    color: white;
+    display: none;
+
+
+  }
+
+  #add_box {
+    background-color: seagreen;
+    width: 270px;
+    height: 150px;
+    padding: 9px;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    margin-left: 28px;
+    margin-top: 70px;
+    box-shadow: 2px 2px 9px black;
+    transition: 2s linear;
+    font-size: 20px;
+  }
+
+  #add_box input {
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 3px;
+  }
+
+  #add_box button {
+    margin-top: 25px;
+    margin-left: 3px;
+    width: 120px;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 10px;
+
+  }
+
+  #plus {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    margin-right: 10px;
+    cursor: pointer;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    
+
+
+  }
+  .date
+  {
+      float: right;
+      color: white;
+      clear: both;
+  }

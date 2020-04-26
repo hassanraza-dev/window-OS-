@@ -7,57 +7,65 @@
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    <script src="./js/index.js"></script>
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+        <script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./jquery-ui.min.css">
+  <script src="./jquery-ui.min.js"></script>
+
+  <script>
+    $( function() {
+      $( "#draggable" ).draggable();
+    } );
+    </script>
 
 </head>
-<script>
 
-    function insert(num)
-    {
-        document.form.answer.value += num; 
-    }
-
-    function equal()
-    {
-        document.form.answer.value = eval(document.form.answer.value);
-
-    }
-</script>
-<body>
-    <div class="icon-box">
-    <div class="icon-div" ondblclick="cal()">
+<body >
+    <div class="icon-box" >
+    <div class="icon-div" ondblclick="display('cal')" >
         <img src="./img/calculator-icon.png" >
         <p style="margin: 0px;">Calculator</p>
     </div>
 
-    <div class="icon-div">
+    <div class="icon-div" ondblclick="display('git')" >
         <img src="./img/github.png" >
         <p style="margin: 0px;">Fetch Git Profile</p>
     </div>
 
-    <div class="icon-div">
+    <div class="icon-div" ondblclick="display('bg2')">
         <img src="./img/wheather-icon.png" >
         <p style="margin: 0px;">Wheather</p>
     </div>
 
     <div class="icon-div">
-        <img src="./img/todo.png" >
+        <img src="./img/todo.png" ondblclick="display('todo')" >
         <p style="margin: 0px;">Todo</p>
     </div>
-    <div class="icon-div">
-        <img src="./img/exp.png" >
-        <p style="margin: 0px;">Expense Management System</p>
+    
+    
     </div>
-    <div class="icon-div">
-        <img src="./img/tic-tac-toe.jpg" >
-        <p style="margin: 0px;">Tic Tac Toe</p>
-    </div>
-    </div>
-
-    <div class="formstyle" id="cal">
-        <div onclick="hide()" class="hide" >X</div>
-        <form name="form">
-            <input class="output" type="text" name="answer" style="width: 314px; margin: 0px; padding: 0px;">
+ <!---------------------- Calculator-------------------- -->
+    <div class="formstyle" id="cal"  id="draggable" >
+        <div class="hide" ><b style="cursor: pointer; " onclick="hide('cal')">x</b> </div>
+        <form name="form" >
+            <input class="output" type="text" name="answer"  style="width: 294px;">
             <div style="margin: 0 auto; width: 100%; height: 500px; margin-top: 30px;">
             <div onclick="insert(1)" class="btns">1</div>
             <div onclick="insert(2)" class="btns">2</div>
@@ -78,26 +86,146 @@
             <div onclick="insert('*')" class="btns">*</div>
             <div onclick="insert('+')" class="btns">+</div>
             <div onclick="equal()" class="btns">=</div>
-            
-            
-            
-
-            
-            <div onclick="form.answer.value=''" class="btns" style="width: 100%; padding: 0px;padding-top: 10px; padding-bottom: 10px;">Clear</div>
+             
+            <div onclick="form.answer.value=''" class="btns" style="width: 100%; padding: 0px;padding-top: 10px; padding-bottom: 10px; background-color: brown;">Clear</div>
             </div>
             
-
-
         </form>
-
-
     </div>
+    <!---------------------- Fetch github profile -------------------- -->
     
+
+    <div class="screen" id="git">
+        <div class="hide" ><b style="cursor: pointer; " onclick="hide('git')">x</b> </div>
+        <div id="error_div" class="w3-display-middle" style="display: none;">
+            <h1 style="color: red;">User Not Found</h1>
+        </div>
+
+        <input type="text" id="user_name" class="form-control cstm" placeholder="Enter Github Username">
+        <button class="btn btn-danger" onclick="get_github_data()" style="width: 100%; margin-top: 4px;">Search</button>
+
+        <div class="cover"></div>
+
+        <center>
+        <div class="card-avatar w3-card-4" id="avatar-card"></div>
+
+            <div class="pic " id="profile_pic"> </div>
+            <div class="detail_box">
+                <span class="user_name" id="git_user">---</span><br><br><br>
+                <span class="location" id="git_user_location">---</span><br>
+                <span class="email" id="git_user_id">------</span><br>
+            </div>
+           
+                <table style="margin-top: 40px;">
+                    <tr>
+                        <th style="font-size: 17px; width: 90px; text-align: center; color: #3B5998;">Repositories</th>
+                        <th style="font-size: 17px; width: 90px; text-align: center; color: #3B5998;">Following</th>
+                        <th style="font-size: 17px; width: 90px; text-align: center; color: #3B5998;">Followers</th>
+                    </tr>
+
+                    <tr>
+                        <th id="git_repo" style="font-size: 27px; width: 90px; text-align: center; color: red;">---</th>
+                        <th id="git_following" style="font-size: 27px; width: 90px; text-align: center; color: red;">---
+                        </th>
+                        <th id="git_followers" style="font-size: 27px; width: 90px; text-align: center; color: red;">---
+                        </th>
+                    </tr>
+                </table>
+                <div class="git_btn_div">
+                    <a id="git_link"><button class="btn btn-primary git_btn" style="margin-top: 30px;">Visit
+                            Github</button></a>
+                </div>
+            </center>
+
+        </div>
+<!---------------------- Wheather -------------------- -->
+
+        <div class="container-wh"  id="bg2">
+            <div class="hide" ><b style="cursor: pointer; " onclick="hide('bg2')">x</b> </div>
+            <div class="srch-box">
+    
+                <input type="text" id="user-input" placeholder="Enter City Name">
+    
+                <button class="srch-btn" id="btn" onclick="get_data()">
+                    <img src=".//img/search.png" id="icon" style="height: 30px;">
+                </button>
+            </div>
+    <center>
+           
+            <div class="data">
+            <h2 id="day">demo</h2>
+            <p id="name">demo</p>
+            <h1 id="temp" style="font-size: 60px;">demo</h1>
+            <p id="desc">demo</p>
+            </div>
+        </center>
+            <div class="convert" style="border-bottom: 2px solid white;">   
+                <p style="text-align: left;position: absolute;">Kelvin</p><span id="kel" style="float: right;">demo</span>    
+            </div>
+            <div class="convert">
+                <p style="text-align: left; position: absolute;">Fehrenhite</p><span id="fehr" style="float: right;">demo</span>       
+            </div>
+    
+        </div>
+
+<!---------------------- Todo -------------------- -->
+
+        <div class="main" id="todo">
+            <div class="hide" ><b style="cursor: pointer; " onclick="hide('todo')">x</b> </div>
+            <div id="add_box">
+              <input type="text" id="user">
+              <button onclick="add()">Add</button>
+              <button onclick="cancel()">Cancel</button>
+            </div>
+            <div class="list">
+              <div id="list"></div>
+              <div id="plus" onclick="plus()">+</div>
+            </div>
+          </div>
+          <script>
+            var arrtodo = [];
+        
+            function add() {
+        
+              var user = document.getElementById("user");
+              if (user.value == "") {
+                alert("aby saaly!")
+                arrtodo.join() = false
+                
+              }
+              arrtodo.unshift(user.value)
+              
+              var join = arrtodo.join("<br>");
+        
+              document.getElementById("list").innerHTML = join;
+              document.getElementById("user").value = "";
+              document.getElementById("add_box").style.display = "none"
+        
+            }
+        
+            function plus() {
+              document.getElementById("add_box").style.display = "block"
+        
+            }
+            function cancel() {
+              document.getElementById("add_box").style.display = "none"
+        
+            }
+        
+        
+          </script>
+
+
     <div class="footer">
        <ion-icon name="logo-windows" style="color: white; font-size: 27px; cursor: pointer;"></ion-icon>
+       <div class="date">
+       <span id="time" >000</span>
+       <br>
+       <span id="date" >000</span>
+       </div>
     </div>
     
-
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
