@@ -31,13 +31,17 @@
 
   <script>
     $( function() {
-      $( "#draggable" ).draggable();
+      $( "#cal", ).draggable();
+      $( "#git", ).draggable();
+      $( "#container-wh", ).draggable();
+      $( "#todo", ).draggable();
     } );
     </script>
 
 </head>
 
 <body >
+    <div class="window" id="window">
     <div class="icon-box" >
     <div class="icon-div" ondblclick="display('cal')" >
         <img src="./img/calculator-icon.png" >
@@ -62,7 +66,7 @@
     
     </div>
  <!---------------------- Calculator-------------------- -->
-    <div class="formstyle" id="cal"  id="draggable" >
+    <div class="formstyle" id="cal"  >
         <div class="hide" ><b style="cursor: pointer; " onclick="hide('cal')">x</b> </div>
         <form name="form" >
             <input class="output" type="text" name="answer"  style="width: 294px;">
@@ -214,17 +218,17 @@
         
         
           </script>
-
+      <div class="start" id="start"></div>
 
     <div class="footer">
-       <ion-icon name="logo-windows" style="color: white; font-size: 27px; cursor: pointer;"></ion-icon>
+       <ion-icon onclick="start_apear()" name="logo-windows" class="start-icon"></ion-icon>
        <div class="date">
-       <span id="time" >000</span>
+       <span id="time" ></span>
        <br>
-       <span id="date" >000</span>
+       <span id="date" ></span>
        </div>
     </div>
-    
+    </div>
     <script src="./js/index.js"></script>
 </body>
 

@@ -194,13 +194,13 @@ function clock() {
 
   var h = now.getHours();
   var m = now.getMinutes();
-  var s = now.getSeconds();
+  
   var d = now.getDate();
   var mn = now.getMonth();
   var y = now.getFullYear();
 
   m = check(m);
-  s = check(s);
+  
   h = check(h);
 
 
@@ -221,7 +221,7 @@ function clock() {
 
 
   var time = h + " : " + m +  " " + session;
-  var date = d + "/" + mn + "/" + y
+  var date = (mn+1) + "/" + d + "/" + y
  
 
   document.getElementById("time").innerHTML = time;
@@ -235,4 +235,8 @@ function clock() {
 setInterval(clock, 0);
 
 
-
+let start_apear = ()=>
+{
+  let start = document.getElementById("start")
+  start.style.marginTop = "200px"
+}

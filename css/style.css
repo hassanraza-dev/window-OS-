@@ -1,10 +1,17 @@
 body
 {
+}
+.window
+{
+    
+    position: fixed;
     background-image: url(..//img/bg.jpg);
     background-size:cover ;
     background-repeat: no-repeat;
     padding: 0px;
     margin: 0px;
+    height: 100% ;
+    width: 100%;
 }
 .footer
 {
@@ -229,7 +236,7 @@ input:focus{
     margin: 0 auto;
     
     box-shadow: 1px 1px 9px black;
-    transition: 2s linear;
+    
     position: relative;
     font-size: 30px;
     color: white;
@@ -296,4 +303,25 @@ input:focus{
       float: right;
       color: white;
       clear: both;
+  }
+  span
+  {
+     font-size: 12px;
+  }
+
+  .start
+  {
+      width: 300px;
+      height: 400px;
+      background-color: teal;
+      position: relative;
+      margin-top: 875px;
+      
+  }
+  .start-icon
+  {
+    color: white; 
+    font-size: 27px;
+     cursor: pointer;
+      margin: 10px;
   }
