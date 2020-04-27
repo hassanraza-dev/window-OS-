@@ -1,6 +1,4 @@
-body
-{
-}
+
 .window
 {
     
@@ -12,6 +10,7 @@ body
     margin: 0px;
     height: 100% ;
     width: 100%;
+    
 }
 .footer
 {
@@ -312,10 +311,18 @@ input:focus{
   .start
   {
       width: 300px;
-      height: 400px;
-      background-color: teal;
-      position: relative;
-      margin-top: 875px;
+      height: 500px;
+      background-color: black;
+      position: fixed;
+      bottom: 0;
+      display: none;
+      transition: ease-in-out 1s;
+      
+  }
+  .username
+  {
+      color: white;
+      padding: 10px;
       
   }
   .start-icon
@@ -325,3 +332,41 @@ input:focus{
      cursor: pointer;
       margin: 10px;
   }
+  .bg-img
+  {
+    width: 300px;
+    height: 500px;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: none;
+}
+.list
+{
+    
+      padding: 10px;
+      color: white;
+      transition: .2s;
+      cursor: pointer;
+}
+.list:hover
+{
+    background-color: maroon;
+}
+.contact
+{
+    width: 300px;
+    height: 500px;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-decoration: none;
+    display: none;
+    
+
+}
+.contact a:hover
+{
+    text-decoration: none;
+    
+}

@@ -1,3 +1,6 @@
+
+let name = prompt("Enter Your Name")
+
 function display(id)
 {
     document.getElementById(id).style.display = "block"
@@ -237,6 +240,25 @@ setInterval(clock, 0);
 
 let start_apear = ()=>
 {
-  let start = document.getElementById("start")
-  start.style.marginTop = "200px"
+
+  start = document.getElementById("start")
+  if(start.style.display == "block")
+  {
+    start.style.display = "none"
+  }
+  else
+  {
+    start.style.display = "block"
+  }
+  
+}
+
+let bg_list = id=>
+{
+  document.getElementById(id).style.display = "block"
+  start.style.display = "none"
+}
+let change = img=>
+{
+  document.getElementById("window").style.backgroundImage = `url(${img})`
 }
