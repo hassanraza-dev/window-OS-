@@ -1,5 +1,20 @@
+function ok(){
+var name = document.getElementById("name-user").value;
 
-let name = prompt("Enter Your Name")
+
+
+if(name == "")
+{
+  alert("Please Enter Name")
+}
+else
+{
+  document.getElementById("login").style.display = "none"
+  document.getElementById("window").style.display = "block"
+  document.getElementById("uname").innerHTML = name;
+}
+
+}
 
 function display(id)
 {

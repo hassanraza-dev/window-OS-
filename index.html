@@ -42,6 +42,16 @@
 </head>
 
 <body >
+    <div class="login" id="login">
+        <center>
+            <form>
+        <input type="text" id="name-user" placeholder="Enter your name">
+        <br>
+        <br>
+        <input type="button" value="OK" onclick="ok()">
+        </form>
+    </center>
+    </div>
     <div class="window" id="window">
     <div class="icon-box" >
     <div class="icon-div" ondblclick="display('cal')" >
@@ -222,7 +232,7 @@
       
       <div class="start" id="start">
           <div class="username">
-              <h4>Hello! <h4 id="name" style="color: yellow; font-size: 40px;">hassan</h4></h4>
+              <h4>Hello! <span id="uname" style="color: yellow; font-size: 30px;"></span></h4>
           </div>
           <br>
           <br>
@@ -233,8 +243,8 @@
         <div class="list" onclick="bg_list('contact')">
             <h4>Contact Developer</h4>
         </div>
-        <div class="list">
-            <h4>Logout</h4>
+        <div class="list" onclick="location.reload()">
+          <h4>Logout</h4>
         </div>
       </div>
       <div class="bg-img" id="bg_img">
@@ -256,7 +266,7 @@
      <a href="#"><h4 class="list"><ion-icon name="logo-instagram" style="font-size: 20px;"></ion-icon> hassanraza243</h4></a>
      <a href="#"><h4 class="list"><ion-icon name="logo-twitter" style="font-size: 20px;"></ion-icon> Muhamma86971106</h4></a>
      <a href="#"><h4 class="list"><ion-icon name="logo-whatsapp" style="font-size: 20px;"></ion-icon> +923102175962</h4></a>
-     <a href="#"><h4 class="list"><ion-icon name="logo-github" style="font-size: 20px;"></ion-icon> hassanraza-dev</h4></a>
+     <a href="https://github.com/hassanraza-dev" target="_blank"><h4 class="list"><ion-icon name="logo-github" style="font-size: 20px;"></ion-icon> hassanraza-dev</h4></a>
      <br>
         <br>
         <br>

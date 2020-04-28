@@ -1,4 +1,27 @@
+.login
+{
+    width: 400px;
+    height: 200px;
+    background-color: red;
+    opacity: .7;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 30px;
+    box-shadow: 1px 1px 15px black;
+    
+}
+input
+{
+    
+    padding: 3px;
 
+}
+button
+{
+    width: 100px;
+    margin-top: 20px;
+    text-align: center;
+}
 .window
 {
     
@@ -10,6 +33,7 @@
     margin: 0px;
     height: 100% ;
     width: 100%;
+    display: none;
     
 }
 .footer
